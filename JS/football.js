@@ -3,11 +3,9 @@ function getTeams() {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.football-data.org/v4/teams/",
+    "url": "http://127.0.0.1:8083/football/teams",
     "method": "GET",
-    "headers": {
-      "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
-    }
+    
   }
   $.ajax(settings).done(function (response) {
     console.log(response);
@@ -24,11 +22,11 @@ function getTeamPlayers(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num,
+  "url": "http://127.0.0.1:8083/football/teams/" + num,
   "method": "GET",
-  "headers": {
-    "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
-    }
+  // "headers": {
+  //   "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+  //   }
   }
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -45,11 +43,11 @@ function getTeamCompetitions(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num,
+  "url": "http://127.0.0.1:8083/football/competitions/" + num,
   "method": "GET",
-  "headers": {
-    "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
-  }
+  // "headers": {
+  //   "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+  // }
 }
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -86,11 +84,11 @@ function getTeamMatches(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num + "/matches/",
+  "url": "http://127.0.0.1:8083/football/teams/" + num + "/matches/",
   "method": "GET",
-  "headers": {
-    "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
-  }
+  // "headers": {
+  //   "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+  // }
 }
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -128,7 +126,7 @@ function getCompetition(num) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.football-data.org/v2/competitions/" + num,
+    "url": "http://127.0.0.1:8083/football/competitions/" + num,
     "method": "GET",
     "headers": {
       "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
